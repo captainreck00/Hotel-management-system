@@ -1,0 +1,13 @@
+Your selected colors:
+
+    Text: #121a04 (RGB: 18, 26, 4)
+    Background: #f8fdf2 (RGB: 248, 253, 242)
+    Primary: #96de2b (RGB: 150, 222, 43)
+    Secondary: #def5bd (RGB: 222, 245, 189)
+    Accent: #84c71f (RGB: 132, 199, 31)
+
+Realtime Colors link for selected colors: https://realtimecolors.com/?colors=121a04-f8fdf2-96de2b-def5bd-84c71f
+
+Thanks for using RealtimeColors.com!
+
+Batuphat Script,Vacation Vibes-font for writing hotel name

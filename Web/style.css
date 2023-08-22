@@ -62,8 +62,26 @@ h1{
 .services{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .serv{
-    width: calc(100/3);
+    box-sizing: border-box;
+    padding: 20px;
+    margin:10px;
+    width: calc((100% / 3) - 20px);
+    min-height: 70px;
+    background-color: #def5bd;
+    border: 4px solid black;
+    box-shadow: 2px 2px 2px 2px #96de2b;
+    border-radius: 7px;
+}
+
+#serv-head2{
+    width: 100%;
+    text-align: center;
+}
+
+#serv-head3{
+    text-align: center;
 }
