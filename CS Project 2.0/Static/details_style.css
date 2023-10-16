@@ -1,0 +1,209 @@
+nav {
+    background-color: rgb(16, 16, 16);
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for spacing */
+    margin: 10px; /* Add margin to create space from edges */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#name {
+    color: #F7F2FD; /* Text color */
+    font-size: 25px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing */
+    margin: 0; /* Remove any default margin */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px; /* Added spacing between logo and name */
+}
+
+
+
+.links{
+    position: relative;
+    right: 0px;
+    padding-left: 10px;
+    display: inline-flex;
+    height: 100%;
+    align-self: center;
+    gap: 10px;
+    background-color: rgb(16,16,16);
+}
+
+.links a{
+    color: #F7F2FD;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F2F3EB;
+    font-family: "Vision";
+    margin: 0;
+    color: #F2F3EB;
+
+}
+
+h2 {
+    text-align: center; /* Center-align the text */
+    color: #101010; /* Blue color for the heading */
+    margin-top: 20px; /* Add some spacing above the heading */
+    font-size: 45px; /* Adjust the font size as needed */
+}
+
+/* Style for the table container */
+.table-container {
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+    color: #101010;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for table header (th) */
+th {
+    background-color: #41b69f;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Style for table data cells (td) */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #333; /* Adjust the text color as needed */
+    word-break: break-all; /* Prevent long content from overflowing */
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Style alternate rows for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+#payement{
+    color: #101010;
+}
+
+.hidden-table{
+    display: none;
+}
+
+tbody{
+    text-align: left;
+}
+
+.booking_btn{
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #41b69f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    align-items: center;
+    margin: 10px;
+}
+
+.booking_btn.selected-button::before {
+    content: ''; /* Add empty content to create the dot appearance */
+    display: block;
+    width: 12px; /* Adjust the dot size as needed */
+    height: 12px;
+    background-color: #fff; /* Dot color */
+    border-radius: 50%; /* Make the dot circular */
+}
+
+.booking_btn:hover {
+    background-color: #223242; /* Button background color on hover */
+}
+
+#payement{
+    width:90%;
+    margin: 10px auto;
+}
+
+.charges{
+    position: relative;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.charges span{
+    position:absolute;
+    right: 1%;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.popup {
+    background-color: #41b69f; /* Set the background color */
+    color: #fff; /* Set the text color to white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    /* Add any other styles you want to match your theme */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+.popup:hover {
+    background-color: #268471; /* Slightly lighter color on hover */
+    color: #fff; /* You can keep the text color the same on hover */
+}
+
+#payDisplay_btn {
+    background-color: #41b69f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Keep the transition for background color */
+}
+
+#payDisplay_btn:hover {
+    background-color: #268471;
+    transform: scale(1.02); /* Smaller scaling effect on hover */
+}
+
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+}

@@ -1,0 +1,193 @@
+import sqlite3
+
+
+
+def Mother_table():
+    conn = sqlite3.connect("HOTEL MANAGEMENT.db")
+    cursor = conn.cursor()
+        
+    cursor.execute('''
+                    CREATE TABLE Mother_table (
+                        booking_id integer primary key,
+                        name  text,
+                        phone_no integer,
+                        email_id text,
+                        adults integer,
+                        Room_no integer,
+                        Room_type  text,
+                        gym     text,
+                        mini_bar    text,
+                        extra_bed text,
+                        breakfast text,
+                        check_in text,
+                        check_out text,
+                        reserved_dates text,  
+                        Amount_payable integer      )
+                ''')
+
+
+
+
+def Room_table():
+    conn = sqlite3.connect("HOTEL MANAGEMENT.db")
+    cursor = conn.cursor()
+        
+    cursor.execute('''
+                    CREATE TABLE Room_table (
+                        Room_no  integer ,
+                        Room_type text,
+                        preference text,
+                        reserved_dates text
+                         )
+                ''')
+    insert_data = [
+        101, "standard room"  ,  "None" , "",
+        102, "standard room"  ,  "None" , "",
+        103, "standard room"  ,  "None" , "",
+        104, "standard room"  ,  "None" , "",
+        106, "standard room"  , "None" , "",
+        107, "standard room"  , "None" , "",
+        108, "standard room"  , "None","",
+        109, "standard room"  , "None","",
+        110, "standard room"  , "None","",
+        111, "standard room"  , "None","",
+        112, "standard room"  , "None","",
+        113, "standard room"  , "None","",
+        114, "standard room"  , "None","",
+        115, "standard room"  , "None","",
+        116, "standard room"  , "None","",
+        117, "standard room"  , "None","",
+        118, "standard room"  , "None","",
+        119, "standard room"  , "None","",
+        120, "standard room"  , "Honeymoon","",
+        121, "standard room"  , "Honeymoon","",
+        122, "standard room"  , "Honeymoon","",
+        123, "standard room"  , "Honeymoon","",
+        124, "standard room"  , "Honeymoon","",
+        125, "standard room"  , "Smoking","",
+        126, "standard room"  , "Smoking","",
+        127, "standard room"  , "Smoking","",
+        128, "standard room"  , "Smoking","",
+        129, "standard room"  , "Smoking","",
+        131, "standard room"  , "Smoking","",
+        133, "standard room"  , "Workspaces","",
+        132, "standard room"  , "Workspaces","",
+        134, "standard room"  , "Workspaces","",
+        135, "standard room"  , "Workspaces","",
+        136, "standard room"  , "Workspaces","",
+        137, "standard room"  , "Workspaces","",
+        138, "standard room"  , "Workspaces","",
+        139, "standard room"  , "Workspaces","",
+                
+
+
+        201, "Deluxe room"  , "Honeymoon","",
+        202, "Deluxe room"  , "Honeymoon","",
+        203, "Deluxe room"  , "Honeymoon","",
+        204, "Deluxe room"  , "Honeymoon","",
+        206, "Deluxe room"  , "Workspaces","",
+        207, "Deluxe room"  , "Workspaces","",
+        208, "Deluxe room"  , "Workspaces","",
+        209, "Deluxe room"  , "Smoking","",
+        210, "Deluxe room"  ," Smoking","",
+        211, "Deluxe room"  ,"None","",
+        212, "Deluxe room"  ,"None","",
+        213, "Deluxe room"  ,"None","",
+        214, "Deluxe room"  ,"None","",
+        215, "Deluxe room"  ,"None","",
+        216, "Deluxe room"  ,"None","",
+        217, "Deluxe room"  ,"None","",
+        218, "Deluxe room"  ,"None","",
+        219, "Deluxe room"  ,"None","",
+        220, "Deluxe room"  ,"None","",
+
+
+        301, "Premier suite"  ,"None","",
+        302, "Premier suite"  ,"None","",
+        303, "Premier suite"  ,"None","",
+        304, "Premier suite"  ,"None","",
+        306, "Premier suite"  ,"None","",
+        307, "Premier suite"  ,"None","",
+        308, "Premier suite"  ,"Honeymoon","",
+        309, "Premier suite"  ,"Honeymoon","",
+        310, "Premier suite"  ,"Workspaces","",
+        311, "Premier suite"  ,"Workspaces","",
+        312, "Premier suite"  ,"Smoking","",
+        313, "Premier suite"  ,"Smoking","",
+        314, "Premier suite"  ,"Pet","",
+        315, "Premier suite"  ,"Pet","",
+        316, "Premier suite"  ,"Pet","",
+
+        401, "Executive suite"  ,"None","",
+        402, "Executive suite"  ,"None","",
+        403, "Executive suite"  ,"None","",
+        404, "Executive suite"  ,"None","",
+        406, "Executive suite"  ,"None","",
+        407, "Executive suite"  ,"None","",
+        408, "Executive suite"  ,"None","",
+        409, "Executive suite"  ,"None","",
+        410, "Executive suite"  ,"None","",
+        411, "Executive suite"  ,"None","",
+        412, "Executive suite"  ,"Pet","",
+        413, "Executive suite"  ,"Pet",""
+
+        ]
+
+    for i in range (0,len(insert_data),4 ):
+                                
+        cursor.execute('''INSERT INTO Room_table (Room_no , Room_type,preference,reserved_dates) 
+                        VALUES(?,?,?,?) ''',(insert_data[i],insert_data[i+1],insert_data[i+2],insert_data[i+3] )  ) 
+        conn.commit()    
+
+# def Booking_table():
+#     conn = sqlite3.connect("HOTEL MANAGEMENT.db")
+#     cursor = conn.cursor()
+        
+#     cursor.execute('''
+#                     CREATE TABLE Booking_table (
+#                         booking_id integer primary key,
+#                         Room_no  integer  ,
+#                         Room_type text,
+#                         name text,
+#                         email text,
+#                         number integer,
+#                         adults integer,
+#                         preference text ,
+#                         gym text,
+#                         mini_bar text,
+#                         extra_bed text,
+#                         breakfast text,
+#                         reserved_dates text
+                       
+#                          )
+#                 ''')
+ 
+# Booking_table()
+
+# {"roomCharges":roomCharge,"roomService":int(room_service_tax),"service":int(service_tax),"vat":int(vat),"gym":gym_pay,"bed":bed_pay,"breakfast":breakfast_pay,"bar":bar_pay}
+
+def payment_table():
+    conn = sqlite3.connect("HOTEL MANAGEMENT.db")
+    cursor = conn.cursor()
+    cursor.execute('''
+                    CREATE TABLE payement_table (
+                        booking_id integer primary key,
+                        roomCharges  integer ,
+                        roomServices  integer ,
+                        service  integer ,
+                        vat  integer ,
+                        gym  integer ,
+                        bed  integer ,
+                        breakfast  integer ,
+                        bar  integer,
+                        total integer,
+                        status text
+                         )
+                ''')
+
+
+payment_table()
+Room_table()
+Mother_table()
+
+

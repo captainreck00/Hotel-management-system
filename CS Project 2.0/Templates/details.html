@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='details_style.css') }}"> <!-- Link to CSS file -->
+</head>
+<body>
+    <script>
+        var custData = {{ data['cust'] | tojson | safe }};
+        var payData = {{ data['paydata'] | tojson | safe }};
+    </script>
+    <script src="{{ url_for('static', filename='details_script.js') }}"></script> <!-- Link to JavaScript file -->
+    <nav>
+        <div class="logo">
+            <img src="https://storage.googleapis.com/studio-design-asset-files/projects/AXq1lE0GO7/s-25x25_4eb63a71-0b02-409e-b2c7-f4d7e494384e.svg" alt="" id="logo">
+            <p id="name">Radiant Horizon</p>
+        </div>
+        <div class="links">
+            <a href="/protected-page">Home Page</a>
+        </div>
+    </nav>
+    <main>
+        <h2>Customer Details</h2>
+        <div class="btn-container">
+            <button class="popup" onclick="showTable('current')">Current Bookings</button>
+            <button class="popup" onclick="showTable('advance')">Advance Bookings</button>
+            <button class="popup" onclick="showTable('past')">Past Bookings</button>
+        </div>
+        <div class="container">
+
+                <div class="table-container" id="currentTable"><table>
+                    <thead>
+                        <tr>
+                            <!-- // k={"name":i[0],"phone_no":i[1],"email_id":i[2],"guests":i[3],"room_no":i[4],"room_type":i[5],"addons":[i[6],i[7],i[8],i[9]],"check_in":i[10],"check_out":i[11],"amount":i[13]} -->
+                            <th>Select</th>
+                            <th>Booking Id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Guests</th>
+                            <th>Room Number</th>
+                            <th>Room Type</th>
+                            <th>Gym</th>
+                            <th>Mini Bar</th>
+                            <th>Extra Bed</th>
+                            <th>Breakfast</th>
+                            <th>Check-In</th>
+                            <th>Check-Out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+                </div>
+                <div class="table-container hidden-table" id="advanceTable"><table>
+                    <thead>
+                        <tr>
+                            <th>Booking Id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Guests</th>
+                            <th>Room Number</th>
+                            <th>Room Type</th>
+                            <th>Gym</th>
+                            <th>Mini Bar</th>
+                            <th>Extra Bed</th>
+                            <th>Breakfast</th>
+                            <th>Check-In</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+                </div>
+                <div class="table-container hidden-table" id="pastTable"><table>
+                    <thead>
+                        <tr>
+                            <th>Booking Id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Guests</th>
+                            <th>Room Number</th>
+                            <th>Room Type</th>
+                            <th>Gym</th>
+                            <th>Mini Bar</th>
+                            <th>Extra Bed</th>
+                            <th>Breakfast</th>
+                            <th>Check-In</th>
+                            <th>Check-Out</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <button id="payDisplay_btn">Pay</button>
+        </div>
+        <div id="payement">
+            <h2>Payement</h2>
+            <div class="payement-table">
+                <p class="charges">Room charges <span id="roomCharges"></span></p>
+                <p class="charges">Room Service<span id="roomService"></span></p>
+                <p class="charges">Vat<span id="vat"></span></p>
+                <p class="charges">Service<span id="service"></span></p>
+                <p class="charges">Gym<span id="gym"></span></p>
+                <p class="charges">Mini Bar<span id="bar"></span></p>
+                <p class="charges">Extra Bed<span id="bed"></span></p>
+                <p class="charges">Breakfast<span id="breakfast"></span></p>
+                <p class="charges">Total Amount<span id="total"></span></p>
+            </div>
+            <button id="paid">Paid</button>
+        </div>
+        
+    </main>
+    
+</body>
+</html>
